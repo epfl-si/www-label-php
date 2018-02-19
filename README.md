@@ -18,7 +18,7 @@ URL:
 `https://www.epfl.ch/tools/label.php?s=22&BG=99cccc&FG=ffffff&label=inForm`
 
 Generate:  
-<img alt="Is EPFL Down" src="https://raw.githubusercontent.com/epfl-idevelop/www-label-php/master/exemple.png">
+<img alt="Exemple label.php" src="https://raw.githubusercontent.com/epfl-idevelop/www-label-php/master/exemple.png">
 
 Who still used this tools
 -------------------------
