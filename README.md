@@ -7,10 +7,16 @@ Description
 -----------
 The label.php script generate an image from a text.
 
-Deploy
-------
-Actually, the tool is deploy via [web2010](https://github.com/epfl-idevelop/web2010) in www servers.  
-But soon, it will be moved in the LAMP server.
+Configuration
+-------------
+A ProxyPass is configured in www servers (old homepage still used for web2010 EPFL libraries).
+```
+ProxyPass        /tools  http://wwwlabel.epfl.ch/tools
+ProxyPassReverse /tools  http://wwwlabel.epfl.ch/tools
+```
+wwww.epfl.ch/tools -> wwwlabel.epfl.ch/tools  
+
+The PHP script is deployed in the LAMP server.
 
 Example usage
 -------------
@@ -26,7 +32,7 @@ Who still used this tools
 * mediatheque-old.epfl.ch
 * ticketshop.epfl.ch
 * people.epfl.ch
-* moodlearchive.epfl.ch/
+* moodlearchive.epfl.ch
 * LAMP websites
 * archived websites (archive.epfl.ch)
 * ...
