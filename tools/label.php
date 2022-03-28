@@ -1,7 +1,4 @@
 <?php
-	if (get_magic_quotes_gpc()) {
-		$_REQUEST['label'] = stripslashes($_REQUEST['label']);
-	}
 	if ( isset($_REQUEST['label']) ) {
 		$label = strtoupper(strtr(urldecode($_REQUEST['label']), 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ', 'AAAAAAAAAAAAOOOOOOOOOOOOEEEEEEEECCIIIIIIIIUUUUUUUUYNN'));
 	} else {
@@ -54,7 +51,7 @@
 
 	header('Content-type: image/png');
 
-	$fontpath = dirname($SCRIPT_FILENAME).'/fonts/Tgb_____.ttf';
+	$fontpath = dirname($_SERVER['SCRIPT_FILENAME']).'/fonts/Tgb_____.ttf';
 
 	$size = @imagettfbbox($s,0,$fontpath,$label);
 	$dx = (int) abs($size[2] - $size[0]) + 1;
@@ -62,13 +59,13 @@
 
 	$im = @imagecreate ($dx + $sl + $sr, $dy + $st + $sb);
 
-	$brc = (int) hexdec($bg{0}.$bg{1});
-	$bgc = (int) hexdec($bg{2}.$bg{3});
-	$bbc = (int) hexdec($bg{4}.$bg{5});
+	$brc = (int) hexdec($bg[0].$bg[1]);
+	$bgc = (int) hexdec($bg[2].$bg[3]);
+	$bbc = (int) hexdec($bg[4].$bg[5]);
 
-	$frc = (int) hexdec($fg{0}.$fg{1});
-	$fgc = (int) hexdec($fg{2}.$fg{3});
-	$fbc = (int) hexdec($fg{4}.$fg{5});
+	$frc = (int) hexdec($fg[0].$fg[1]);
+	$fgc = (int) hexdec($fg[2].$fg[3]);
+	$fbc = (int) hexdec($fg[4].$fg[5]);
 
 	imagecolorallocate($im,$brc,$bgc,$bbc);
 	$txt = imagecolorallocate($im, $frc,$fgc,$fbc);
