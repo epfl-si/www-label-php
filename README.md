@@ -29,9 +29,6 @@ Generate:
 Who still used this tools
 -------------------------
 * inform.epfl.ch
-* mediatheque-old.epfl.ch
-* ticketshop.epfl.ch
-* people.epfl.ch
 * moodlearchive.epfl.ch
 * LAMP websites
 * archived websites (archive.epfl.ch)
