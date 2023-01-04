@@ -1,3 +1,6 @@
+:warning: Service decommissioned on 19.12.2022
+==============================================
+
 # www-label-php
 Repository for the old tool PHP still used at EPFL VPSI -> label.php  
 
